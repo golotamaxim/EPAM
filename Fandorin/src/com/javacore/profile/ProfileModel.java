@@ -35,6 +35,8 @@ public class ProfileModel extends BaseModel {
 
 
 
+
+
     public String getName() {
         return firstName + " " + lastName;
     }

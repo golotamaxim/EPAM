@@ -29,6 +29,7 @@ public class ProfileController implements ACommand {
                 profileView.setProfileModel(ProfileStore.INSTANCE.getProfileModel(requestedId));
                 profileView.drawWithCanvas();
 
+
             } else {
                 System.out.println("There is no crimes with this Id");
             }

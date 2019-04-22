@@ -6,6 +6,7 @@ import com.javacore.profile.ProfileController;
 import java.util.HashMap;
 import java.util.Map;
 
+
 public enum  CommandRegistry {
     INSTANCE;
     static Map<String, ACommand> commands;

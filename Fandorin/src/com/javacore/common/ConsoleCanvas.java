@@ -50,6 +50,19 @@ public class ConsoleCanvas extends Canvas {
     public void drawText(String text) {
         char[] charText = text.toCharArray();
         int hasNext = 0;
+        int i = 0;
+        int j = 0;
+        while (hasNext < charText.length) {
+            pixels[i][j] = charText[hasNext];
+            hasNext++;
+            i++;
+            if (i == width) {
+                i = 0;
+                j++;
+            }
+
+        }
+        draw();
 
 
 
