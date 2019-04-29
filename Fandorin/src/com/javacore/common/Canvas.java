@@ -10,8 +10,8 @@ public abstract class Canvas {
 
 
     public abstract void draw();
-    public abstract void drawRect();
-    public abstract void drawCircle();
+    public abstract void drawRect(int x, int y, int upSide, int leftSide); // x, y are coordinates of left up corner, size is one side;
+    public abstract void drawCircle(int x, int y, int radius); //x,y are coordinates of center;
     public abstract void drawText(String text);
 
 

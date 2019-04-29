@@ -45,9 +45,9 @@ public class Application {
             criminals.insert(rec);
         }
 
-        System.out.println();
+        //System.out.println();
         ProfileView pv = new ProfileView();
-        pv.getCanvas().drawText("12");
+        //pv.getCanvas().drawText("12");
 
 
 

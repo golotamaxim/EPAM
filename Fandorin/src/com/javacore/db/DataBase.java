@@ -1,17 +1,32 @@
 package com.javacore.db;
 
-import com.sun.xml.internal.ws.policy.privateutil.PolicyUtils;
+import com.javacore.Application;
+import com.javacore.command.ACommand;
 
 import java.io.*;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
-public class DataBase {
+
+public class DataBase implements ACommand {
 
     private Object tableLock = new Object();
 
     Map<String, Table> tables;
+
+    @Override
+    public void execute() {
+        System.out.println("Which data are you interested?");
+        try {
+            String query = Application.br.readLine();
+            Query.dbCommunication(query);
+
+
+        } catch (IOException ex) {
+            ex.printStackTrace();
+        }
+    }
 
     public List<Record> select() {
         synchronized (tableLock) {
@@ -57,7 +72,7 @@ public class DataBase {
             br = new BufferedReader(new InputStreamReader(fis));
             String line;
             while((line = br.readLine()) != null) {
-                System.out.println("Source line: " + line);
+                //System.out.println("Source line: " + line);
                 if (line.indexOf("#") == -1){
                     result.add(line.split(";"));
                 }

@@ -30,8 +30,8 @@ public class ProfileView extends BaseView {
     }
 
     void drawWithCanvas() {
-        canvas.drawCircle();
-        canvas.drawRect();
+        canvas.drawCircle(10,15, 6);
+        //canvas.drawRect();
         String modelDescription = profileModel.toString();
         canvas.drawText(modelDescription);
 

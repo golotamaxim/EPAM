@@ -1,6 +1,7 @@
 package com.javacore.command;
 
 
+import com.javacore.db.DataBase;
 import com.javacore.profile.ProfileController;
 
 import java.util.HashMap;
@@ -20,6 +21,8 @@ public enum  CommandRegistry {
         commands.put("criminals", new ProfileController());
         commands.put("crime", new ProfileController());
         commands.put("query", new ProfileController());
+        commands.put("db", new DataBase());
+        commands.put("database", new DataBase());
     }
 
     public ACommand getCommand(String name) {
